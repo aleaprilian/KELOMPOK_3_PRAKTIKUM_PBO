@@ -1,56 +1,103 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+package com.mycompany.praktikum3;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author ale 
  */
+public class Praktikum3 {
 
-
-
-/*
- @author Ale Aprilian
- */
-package com.mycompany.praktikum2;
-public class Praktikum2 {
     public static void main(String[] args) {
-       /*
         
-        */ 
+        // Operator Aritmatika
+        int a = 10, b = 2;
+        System.out.println("Tambah (+) : " + (a + b));
+        System.out.println("Kurang (-) : " + (a - b));
+        System.out.println("Kali (*) : " + (a * b));
+        System.out.println("Bagi (/) : " + (a / b));
+        System.out.println("Modulus (%) : " + (a % b));
+        
+        // Operator Perbandingan
+        System.out.println("a == b : " + (a == b));
+        System.out.println("a != b : " + (a != b));
+        System.out.println("a > b : " + (a > b));
+        System.out.println("a < b : " + (a < b));
+        System.out.println("a >= b : " + (a >= b));
+        System.out.println("a <= b : " + (a <= b));
+        
+        // Operator Logika
+        boolean x = true, y = false;
+        System.out.println("x && y : " + (x && y));
+        System.out.println("x || y : " + (x || y));
+        System.out.println("!x : " + (!x));
+        
+        // Operator Assignment
+        int i = 10;
+        i+= 2;
+        System.out.println("i += 2 : " + i);
+        
+        // Operator Ternary
+        int nilai = 80;
+        char grade = (nilai >= 80) ? 'A' : (nilai >= 75) ? 'B' : 'C';
+        System.out.println("Nilai : " + grade);
+        
+        // Operator Bitwise
+        int m = 12, n = 10;
+        System.out.println("m & n = " + (m & n));
+        
+        // Penggunaan System.out
+        System.out.println("Hello Word");
+        System.out.print("Hello Word");
+        System.out.println();
+        
+        // Output printf
+        String nama = "gita";
+        int umur = 18;
+        double tinggi = 175.0f;
+        System.out.printf("Halo saya %s, umur %d, tinggi %.1f cm", nama, umur, tinggi);
+        System.out.println();
+        
+        // Input Menggunakan Scanner
+        Scanner input = new Scanner(System.in);
+        System.out.print("Masukan nama: ");
+        nama = input.nextLine();
+        System.out.print("Masukan NIM: ");
+        String nim = input.nextLine();
+        
+        System.out.println("Hallo nama saya " + nama);
+        System.out.println("Nim saya " + nim);
+
+        
+        try {
+            System.out.print("Masukkan umur : ");
+            int umurUser = input.nextInt();
        
-        //Menampilkan   hello world
-        System.out.println("Hello World");
-        //Menampilkan Nama
-        System.out.println("Halo Nama Saya Ale Aprilian");
-     
-         
- 
-        /*
-        Deklarasi dan inisailisai
-        */
-        final String NAMA = "Ale Aprilian";     //inisialisasi variabel konstanta
-        char golDarah = 'O';
-        int umur = 21;
-     /*
-        Tipe data
-        */
-     String Alamat = " Taman Karya VI ";
-     String Nim = "2407114008";
-     double[] ipk = {3.14,3.45,3.16};
-     byte ipkSemester = (byte) ipk[0];
-     byte newIpk = ipkSemester;     
-   
-    
-     System.out.println("Nama Saya : " + NAMA);
-     System.out.println("Nim Saya : " + Nim);
-     System.out.println("Golongan Darah Saya : " + golDarah );
-     System.out.println("Umur : " + umur);
-     //System.out.println(ipk[2]);
-     System.out.println("Alamat Saya : " + Alamat);
-     System.out.println("Nilai Ipk : " + newIpk);
-     
-     
-     
-
-    }
-      
-     
-    }
+            System.out.println("Umur anda adalah : " + umurUser);
+        }
+        catch (Exception e) {
+            System.out.println("Anda salah input");
+        }
         
+        // Class Wrapper
+        String str = "18";
+        int primitifInt = 100;
+        int anotherWrapper = 200;
+        int intUmur = Integer.parseInt(str);
+        System.out.print("string : " + intUmur);
+        Integer wrapperInt = primitifInt; // Autoboxing
+        int anotherPrimitif = anotherWrapper; // Unboxing
 
+        System.out.println();
+        
+        // Enumerasi
+        enum Hari {
+            SENIN, SELASA, RABU, KAMIS, JUMAT, SABTU, MINGGU
+        }
+        
+        Hari hariIni = Hari.RABU ; 
+        if (hariIni == Hari.RABU){
+            System.out.println("benar, hari ini hari " + Hari.RABU);
+        }
+    }
+}
