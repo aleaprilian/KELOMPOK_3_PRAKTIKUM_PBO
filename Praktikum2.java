@@ -52,8 +52,8 @@ public class Praktikum3 {
         System.out.println();
         
         // Output printf
-        String nama = "gita";
-        int umur = 18;
+        String nama = "ale";
+        int umur = 25;
         double tinggi = 175.0f;
         System.out.printf("Halo saya %s, umur %d, tinggi %.1f cm", nama, umur, tinggi);
         System.out.println();
