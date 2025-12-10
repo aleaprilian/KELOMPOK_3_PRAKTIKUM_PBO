@@ -1,0 +1,7 @@
+#Konfigurasi SmartControl
+#Tue Dec 09 05:55:00 GMT+07:00 2025
+password=kelompok3
+topik=Matematika
+username=kelompok3
+waktuHukuman=300
+waktuKuis=40
